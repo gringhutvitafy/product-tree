@@ -1,110 +1,121 @@
-# vitafy-product-tree
-```mermaid
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Vitafy Product Tree</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: "default" });
+  </script>
+</head>
+
+<body>
+<h2>Vitafy Produktbaum</h2>
+
+<div class="mermaid">
 graph LR
-    A("Produkte bei Vitafy")
+    A("Vitafy")
+    A --> L("Lebensmittel")
+    A --> N("Nahrungsergänzung")
+    A --> G("Gewürze & Tee")
+    A --> S("Sport & Non-Food")
 
-    %% Oberkategorien
-    A --> L1("Lebensmittel & Proteinnahrung")
-    A --> N1("Nahrungsergänzungsmittel & Gesundheit")
-    A --> G1("Gewürze, Kräuter & Tee")
-    A --> S1("Sport & Non-Food")
+    L --> LP("Proteine")
+    L --> LS("Snacks")
+    L --> LE("Energy")
+    L --> LM("Mahlzeiten")
+    L --> LF("Feinkost")
+    L --> LZ("Süße")
+    L --> LX("Saucen")
 
-    %% Lebensmittel & Proteinnahrung
-    L1 --> L1a("Proteinnahrung & Sportfood")
-    L1a --> L1a1("Whey (Molkenprotein)")
-    L1a --> L1a2("Vegane Proteine")
+    LP --> LP1("Whey")
+    LP --> LP2("Vegan")
 
-    L1 --> L1b("Proteinsnacks")
-    L1b --> L1b1("Riegel")
-    L1b --> L1b2("Chips")
-    L1b --> L1b3("Aufstriche")
+    LS --> LS1("Riegel")
+    LS --> LS2("Chips")
+    LS --> LS3("Aufstriche")
 
-    L1 --> L1c("Energy & Booster als Lebensmittel")
-    L1c --> L1c1("Energy Drinks / Gels")
-    L1c --> L1c2("Boosterpulver")
+    LE --> LE1("Drinks")
+    LE --> LE2("Booster")
 
-    L1 --> L1d("Shakes & Mahlzeitenersatz")
-    L1d --> L1d1("Slim Shake")
-    L1d --> L1d2("Suppen-Trinkmahlzeiten")
+    LM --> LM1("Slim")
+    LM --> LM2("Suppen")
 
-    L1 --> L1e("Feinkost – Nüsse & Trockenfrüchte")
-    L1e --> L1e1("Nüsse & Kerne")
-    L1e --> L1e2("Trockenfrüchte")
-    L1e --> L1e3("Studentenfutter & Mischungen")
+    LF --> LF1("Nüsse")
+    LF --> LF2("Trockenfr.")
+    LF --> LF3("Studentenf.")
 
-    L1 --> L1f("Feinkost – Öle & Fette")
+    LZ --> LZ1("Zucker")
+    LZ --> LZ2("Xucker")
 
-    L1 --> L1g("Zucker & Süßungsmittel")
-    L1g --> L1g1("Zucker & alternative Süße")
-    L1g --> L1g2("Xucker & Xylit")
+    LX --> LX1("Zero-Saucen")
+    LX --> LX2("Zero-Sirup")
 
-    L1 --> L1h("Saucen & Sirup")
-    L1h --> L1h1("Zero-Saucen")
-    L1h --> L1h2("Zero-Sirup")
+    N --> NK("Klassisch")
+    N --> NS("Sport")
+    N --> NP("Pflanzen")
+    N --> NG("Pflege")
+    N --> NB("Bücher")
 
-    %% Nahrungsergänzungsmittel & Gesundheit
-    N1 --> N1a("Klassische NEM")
-    N1a --> N1a1("Vitamine & Mineralstoffe")
-    N1a --> N1a2("Immunsystem")
-    N1a --> N1a3("Schlaf & Stress")
-    N1a --> N1a4("Shots")
-    N1a --> N1a5("Hormon-Balance")
-    N1a --> N1a6("Darm & Probiotika")
+    NK --> NK1("Vitamine")
+    NK --> NK2("Immun")
+    NK --> NK3("Schlaf")
+    NK --> NK4("Shots")
+    NK --> NK5("Hormone")
+    NK --> NK6("Darm")
 
-    N1 --> N1b("Sport-NEM")
-    N1b --> N1b1("Kreatin")
-    N1b --> N1b2("Aminosäuren")
-    N1b --> N1b3("Performance-Produkte")
+    NS --> NS1("Kreatin")
+    NS --> NS2("Aminos")
+    NS --> NS3("Performance")
 
-    N1 --> N1c("Kräuter- & Pflanzen-NEM")
-    N1c --> N1c1("Kapseln")
-    N1c --> N1c2("Tropfen")
-    N1c --> N1c3("Blends")
+    NP --> NP1("Kapseln")
+    NP --> NP2("Tropfen")
+    NP --> NP3("Blends")
 
-    N1 --> N1d("Gesundheit & Pflege")
-    N1d --> N1d1("Kosmetik / Pflege")
-    N1d --> N1d2("Regulat-Produkte")
+    NG --> NG1("Kosmetik")
+    NG --> NG2("Regulat")
 
-    N1 --> N1e("Gesundheitsliteratur & Ratgeber")
-    N1e --> N1e1("Bücher")
+    NB --> NB1("Ratgeber")
 
-    %% Gewürze, Kräuter & Tee
-    G1 --> G1a("Gewürze & -mischungen")
-    G1a --> G1a1("Gewürzmischungen")
-    G1a --> G1a2("Pfeffer")
+    G --> GG("Gewürze")
+    G --> GK("Kräuter")
+    G --> GS("Salz")
+    G --> GT("Tee")
 
-    G1 --> G1b("Kräuter & Pflanzen")
-    G1b --> G1b1("Kräuter")
-    G1b --> G1b2("Superfood-Pulver")
+    GG --> GG1("Mischungen")
+    GG --> GG2("Pfeffer")
 
-    G1 --> G1c("Salz & Würzsalze")
+    GK --> GK1("Kräuter")
+    GK --> GK2("Superfood")
 
-    G1 --> G1d("Tee & Teemischungen")
-    G1d --> G1d1("Schwarzer Tee")
-    G1d --> G1d2("Grüner Tee")
-    G1d --> G1d3("Sonstige Tees")
+    GT --> GT1("Schwarz")
+    GT --> GT2("Grün")
+    GT --> GT3("Sonstige")
 
-    %% Sport & Non-Food
-    S1 --> S1a("Sportkleidung")
-    S1a --> S1a1("Stringer Tank Tops")
-    S1a --> S1a2("Gym-Hosen, Hoodies etc.")
+    S --> SK("Kleidung")
+    S --> SZ("Equipment")
+    S --> SM("Merch")
+    S --> SV("Verpackung")
+    S --> SO("Sonstiges")
 
-    S1 --> S1b("Sportzubehör & Equipment")
-    S1b --> S1b1("Hantelstangen & -scheiben")
-    S1b --> S1b2("Hantelbänke")
-    S1b --> S1b3("Magnesia")
+    SK --> SK1("Tops")
+    SK --> SK2("Hosen")
 
-    S1 --> S1c("Shaker, Flaschen & Merch")
-    S1c --> S1c1("Trinkflaschen")
-    S1c --> S1c2("Beileger & Merch")
+    SZ --> SZ1("Hanteln")
+    SZ --> SZ2("Bank")
+    SZ --> SZ3("Magnesia")
 
-    S1 --> S1d("Verpackungen & Leerverpackungen")
-    S1d --> S1d1("Versandkartons")
-    S1d --> S1d2("Pappdosen & Gläser")
-    S1d --> S1d3("Deckel & Verschlüsse")
-    S1d --> S1d4("Wellpappe & Füllpapier")
+    SM --> SM1("Flaschen")
+    SM --> SM2("Beileger")
 
-    S1 --> S1e("Sonstiges Non-Food")
-    S1e --> S1e1("Saunaaufguss & Bäder")
-    S1e --> S1e2("Testartikel")
-```
+    SV --> SV1("Karton")
+    SV --> SV2("Dosen")
+    SV --> SV3("Deckel")
+    SV --> SV4("Füllung")
+
+    SO --> SO1("Sauna")
+    SO --> SO2("Diverses")
+</div>
+
+</body>
+</html>
